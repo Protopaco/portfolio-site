@@ -7,6 +7,7 @@ import {
 import LandingPage from './LandingPage.js';
 import Header from './Header.js';
 import Career from './Career.js';
+import Projects from './Projects.js';
 import './App.css';
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
           component={LandingPage} />
         <Route exact path="/career"
           component={Career} />
+        <Route exact path="/projects"
+          component={Projects} />
       </Switch>
     </Router>
   );
