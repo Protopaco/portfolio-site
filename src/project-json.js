@@ -10,11 +10,11 @@ const projectJson = [
             '/css.png'
         ],
         description: [
-            `My Vampire Boyfriend is a fun choose your own adventure / dating simulator.  It is more importantly a demonstration of the game engine that my team & I built.`,
+            `My Vampire Boyfriend is a choose your own adventure / dating simulator.  It is more importantly a demonstration of the game engine that my team & I built.`,
 
-            `We used a modular design that guides the user through the story based on information from a series of JSON files.`,
+            `We used a modular design that guides the user through the story based on information from a series of linked JSON files. The engine parses that data to produce the story.`,
 
-            `Although there were 5 scenes and over 50 possible prompts, the game could be scaled twice that size without changing any game engine code.`,]
+            `Although there were 5 scenes and over 50 possible prompts, the game could be scaled to twice that size without changing any game engine code.`,]
     },
     {
         title: "AlcheZoomy",
@@ -50,8 +50,8 @@ const projectJson = [
             '/aws.png'
         ],
         description: [
-            `Having discovered some design flaws, and seeing its tremendous potential I am rebuilding AlcheZoomy from scratch.`,
-            `Using OAuth 2.0, mobX, Material-Ui, functional React, I am building a faster, cleaner, and more stable version of the app.`,
+            `Having discovered some design flaws, yet seeing its tremendous potential I am rebuilding AlcheZoomy from scratch.`,
+            `Using OAuth 2.0, mobX, Material-Ui, and functional React, I am building a faster, cleaner, and more stable version of the app.`,
             ` When it is finished, teachers will be able to publish individual meetings, adding them to our database of lectures.  Students will then be invited to view, save, and share them.`
         ]
     },
