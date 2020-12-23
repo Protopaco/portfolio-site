@@ -59,18 +59,27 @@ export const LandingPage = () => {
         <div className={classes.root}>
             <div>
                 <Container className={classes.container}>
-                    <Box className={classes.box}>
+                    <Box
+                        className={classes.box}
+                        component={Link}
+                        to='/aboutme'>
                         <Typography className={classes.linkbox}>
                             About me
                         </Typography>
 
                     </Box>
-                    <Box className={classes.box} component={Link} to='/career'>
+                    <Box
+                        className={classes.box}
+                        component={Link}
+                        to='/career'>
                         <Typography className={classes.linkbox}>
                             Career
                             </Typography>
                     </Box>
-                    <Box className={classes.box} component={Link} to='/projects'>
+                    <Box
+                        className={classes.box}
+                        component={Link}
+                        to='/projects'>
                         <Typography className={classes.linkbox}>
                             PROJECTS
                         </Typography>
