@@ -43,7 +43,7 @@ const careerJson = [
         business: "Pablito's Taqueria",
         time: '2008 to 2015',
         color: '#000000',
-        logo: '/pablitos.jpeg',
+        logo: '/pablitos.jpg',
         details: [
             'Sole Owner & Chef',
             '$300,000 yearly revenue, 12 employees',
