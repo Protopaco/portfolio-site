@@ -37,8 +37,8 @@ const useStyles = makeStyles((theme) => ({
     },
 
     textbox: {
-        ...theme.typography.button,
-        padding: theme.spacing(2),
+        // ...theme.typography.button,
+        padding: theme.spacing(1),
         fontSize: '.4em',
     },
 
@@ -69,7 +69,7 @@ export const LandingPage = () => {
                     </Box>
                     <Box className={classes.box} component={Link} to='/career'>
                         <Typography className={classes.linkbox}>
-                            Career!
+                            Career
                             </Typography>
                     </Box>
                     <Box className={classes.box}>
