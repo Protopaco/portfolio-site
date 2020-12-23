@@ -41,7 +41,7 @@ const careerJson = [
     {
         title: 'Owner',
         business: "Pablito's Taqueria",
-        time: '2008 to 2010',
+        time: '2008 to 2015',
         color: '#000000',
         logo: '/pablitos.jpeg',
         details: [
