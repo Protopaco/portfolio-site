@@ -102,7 +102,7 @@ export const Career = () => {
                         <CardHeader
                             title={`${popUpCard.title} - ${popUpCard.business}`}
                             subheader={popUpCard.time}
-                            style={{ backgroundColor: popUpCard.color, color: '#FFFFFF', }}
+                            style={{ backgroundColor: popUpCard.color, color: '#FFFFFF' }}
                             subheaderTypographyProps={{ color: '#FFFFFF' }}
                         />
                         <CardMedia

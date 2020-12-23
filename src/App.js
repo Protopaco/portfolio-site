@@ -8,6 +8,7 @@ import LandingPage from './LandingPage.js';
 import Header from './Header.js';
 import Career from './Career.js';
 import Projects from './Projects.js';
+import AboutMe from './AboutMe.js'
 import './App.css';
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
           component={Career} />
         <Route exact path="/projects"
           component={Projects} />
+        <Route exact path="/aboutme"
+          component={AboutMe} />
       </Switch>
     </Router>
   );

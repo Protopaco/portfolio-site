@@ -26,9 +26,7 @@ const useStyles = makeStyles((theme) => ({
         color: '#1f3a4e',
         fontSize: "3em",
         display: 'flex',
-
         justifyContent: 'space-between',
-        // alignItems: 'center',
         margin: '10px',
     },
     container: {
@@ -156,8 +154,7 @@ export const Projects = () => {
                                 return <p>
                                     <Typography
                                         className={classes.description}
-                                        variant="body1"
-                                    >
+                                        variant="body1">
                                         {text}
                                     </Typography>
 
