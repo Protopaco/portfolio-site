@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Box, Typography, Button, Backdrop, Card, CardContent } from '@material-ui/core';
+import { Container, Box, Typography, Button, Backdrop, Card, CardContent, CardHeader, CardMedia } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import backgroundImage from './images/background.jpg';
 import careerJson from './career-json.js';
@@ -53,17 +53,31 @@ const useStyles = makeStyles((theme) => ({
         zIndex: theme.zIndex.drawer + 1,
         color: '#fff',
     },
+    media: {
+        width: '500px',
+        height: '200px',
+        display: 'flex',
+        justifyContent: 'center',
+    },
+    logo: {
+        width: 'auto',
+        height: '200px',
+    },
+    card: {
+        width: '500px'
+    }
 }))
 
 
 export const Career = () => {
     const classes = useStyles();
     const [open, setOpen] = useState(false);
-    const [popUpCard, setPopUpCard] = useState('')
+    const [popUpCard, setPopUpCard] = useState(careerJson[0])
 
     const handleClick = (job) => {
         setOpen(true);
         setPopUpCard(job);
+        console.log(popUpCard.logo)
     }
 
     const handleClose = () => {
@@ -84,11 +98,16 @@ export const Career = () => {
 
                 </Container>
                 <Backdrop className={classes.backdrop} open={open} onClick={handleClose}>
-                    <Card>
+                    <Card className={classes.card}>
+                        <CardHeader
+                            title={`${popUpCard.title} - ${popUpCard.time}`}
+                            subheader={popUpCard.business} />
+                        <CardMedia
+                            className={classes.media}
+                            title={popUpCard.business} >
+                            <img src={popUpCard.logo} className={classes.logo} alt={popUpCard.business} />
+                        </CardMedia>
                         <CardContent>
-                            <Typography >
-                                {popUpCard.business}
-                            </Typography>
                         </CardContent>
                     </Card>
                 </Backdrop>
