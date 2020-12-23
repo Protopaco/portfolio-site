@@ -4,6 +4,7 @@ const careerJson = [
         business: 'Night Light Lounge',
         time: '2017 to 2020',
         logo: '/Night-Light-Logo_black.jpg',
+        color: '#000000',
         details: [
             'Sole Owner & General Manager',
             '$1 mil yearly revenue, 20 employees',
@@ -15,6 +16,7 @@ const careerJson = [
         title: 'Owner',
         business: 'Portland Drag Queen Brunch',
         time: '2018 to 2020',
+        color: '#ec248b',
         logo: '/PDQB-Logo-pink.png',
         details: [
             '$250,000 yearly revenue, 12 contractors',
@@ -28,6 +30,7 @@ const careerJson = [
         title: 'Director of Operations',
         business: 'The Original Taco House',
         time: '2015 to 2017',
+        color: '#9b341d',
         logo: '/original-taco-house-logo.png',
         details: [
             '3 locations, $3.5 mil yearly revenue',
@@ -39,6 +42,7 @@ const careerJson = [
         title: 'Owner',
         business: "Pablito's Taqueria",
         time: '2008 to 2010',
+        color: '#000000',
         logo: '/pablitos.jpeg',
         details: [
             'Sole Owner & Chef',

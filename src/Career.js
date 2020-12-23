@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Box, Typography, Button, Backdrop, Card, CardContent, CardHeader, CardMedia } from '@material-ui/core';
+import { Container, Box, Typography, Button, Backdrop, Card, CardContent, CardHeader, CardMedia, List, ListItem, Divider, ListItemText } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import backgroundImage from './images/background.jpg';
 import careerJson from './career-json.js';
@@ -42,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
         ...theme.typography.button,
         padding: theme.spacing(2),
         fontSize: '.4em',
+        fontWeight: 'bold',
     },
 
     linkbox: {
@@ -89,25 +90,40 @@ export const Career = () => {
             <div>
                 <Container className={classes.container}>
                     {careerJson.map(job => {
-                        return <Box className={classes.box} component={Button} onClick={() => handleClick(job)} key={job.business}>
+                        return <Box className={classes.box} component={Button} onClick={() => handleClick(job)} key={careerJson.indexOf(job)}>
                             <Typography className={classes.linkbox}>
-                                {`${job.time} - ${job.title} - ${job.business}`}
+                                {`${job.title} - ${job.time} - ${job.business}`}
                             </Typography>
                         </Box>
                     })}
-
                 </Container>
                 <Backdrop className={classes.backdrop} open={open} onClick={handleClose}>
                     <Card className={classes.card}>
                         <CardHeader
-                            title={`${popUpCard.title} - ${popUpCard.time}`}
-                            subheader={popUpCard.business} />
+                            title={`${popUpCard.title} - ${popUpCard.business}`}
+                            subheader={popUpCard.time}
+                            style={{ backgroundColor: popUpCard.color, color: '#FFFFFF' }}
+                            subheaderTypographyProps={{ color: '#FFFFFF' }}
+                        />
                         <CardMedia
                             className={classes.media}
                             title={popUpCard.business} >
                             <img src={popUpCard.logo} className={classes.logo} alt={popUpCard.business} />
                         </CardMedia>
                         <CardContent>
+                            <List>
+                                {popUpCard.details.map(detail => {
+                                    return <div>
+                                        <Divider />
+                                        <ListItem>
+                                            <ListItemText
+                                                primary={detail}
+                                                key={popUpCard.details.indexOf(detail)}
+                                            />
+                                        </ListItem>
+                                    </div>
+                                })}
+                            </List>
                         </CardContent>
                     </Card>
                 </Backdrop>
