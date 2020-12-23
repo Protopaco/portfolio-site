@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import LandingPage from './LandingPage.js';
 import Header from './Header.js';
+import Career from './Career.js';
 import './App.css';
 
 function App() {
@@ -15,6 +16,8 @@ function App() {
       <Switch>
         <Route exact path="/"
           component={LandingPage} />
+        <Route exact path="/career"
+          component={Career} />
       </Switch>
     </Router>
   );
