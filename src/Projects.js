@@ -5,6 +5,7 @@ import { Container, Box, Button, Typography } from '@material-ui/core';
 // import LanguageIcon from '@material-ui/icons/Language';
 import projectJson from './project-json.js';
 
+
 const useStyles = makeStyles((theme) => ({
     root: {
         backgroundImage: `url(${backgroundImage})`,
@@ -19,14 +20,14 @@ const useStyles = makeStyles((theme) => ({
     },
     box: {
         border: '10px solid #1f3a4e',
-        width: '1000px',
+        width: '1200px',
         height: '650px',
         backgroundColor: 'rgba(255, 255, 255, 0.6)',
         color: '#1f3a4e',
         fontSize: "3em",
         display: 'flex',
-        flexDirection: 'column',
-        // justifyContent: 'center',
+
+        justifyContent: 'space-between',
         // alignItems: 'center',
         margin: '10px',
     },
@@ -42,22 +43,61 @@ const useStyles = makeStyles((theme) => ({
         display: "flex",
         justifyContent: 'space-between',
         flexDirection: 'row',
-
     },
     button: {
         backgroundColor: '#1f3a4e',
         color: '#fbf9ec',
     },
+    logo_row: {
+        backgroundColor: 'rgba(27, 50, 67, 0.4)',
+        padding: '10px 20px 0px 20px',
+        borderRadius: '50px',
+    },
     logo: {
-        width: '30px',
+        width: '40px',
         padding: '5px'
     },
     description: {
-        width: '300px'
+        width: '400px',
     },
     sidebar: {
-        marginLeft: '5px'
+        marginRight: '20px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-evenly',
+        alignItems: 'center',
+    },
+    text_box: {
+        backgroundColor: 'rgba(255, 255, 255, 0.6)',
+        padding: '0px 10px 0px 10px',
+        marginTop: '30px',
+    },
+    image: {
+        width: '700px',
+        margin: '25px',
+    },
+    body: {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+
+    github_link: {
+        backgroundColor: 'rgba(255, 255, 255, 0.6)',
+        padding: '10px',
+        borderRadius: '50px',
+        width: '50px',
+        height: '50px',
+    },
+
+    github_label: {
+        ...theme.typography.button,
+        padding: theme.spacing(2),
+        fontSize: '.5em',
+        textDecoration: 'none',
     }
+
 }))
 
 export const Projects = () => {
@@ -87,9 +127,31 @@ export const Projects = () => {
                         </Button>
                     })}
                 </div>
+
                 <Box className={classes.box}>
+                    <div className={classes.body}>
+                        <a href={displayedProject.url}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <img
+                                className={classes.image}
+                                src={displayedProject.image}
+                                alt={displayedProject.title}
+                            />
+                        </a>
+                        <div className={classes.logo_row}>
+                            {displayedProject.logos.map(logo => {
+                                return <img
+                                    src={logo}
+                                    alt={logo}
+                                    className={classes.logo}
+                                />
+                            })}
+                        </div>
+                    </div>
                     <div className={classes.sidebar}>
-                        <div>
+                        <div className={classes.text_box}>
                             {displayedProject.description.map(text => {
                                 return <p>
                                     <Typography
@@ -102,15 +164,18 @@ export const Projects = () => {
                                 </p>
                             })}
                         </div>
-                        <div>
-                            {displayedProject.logos.map(logo => {
-                                return <img
-                                    src={logo}
-                                    alt={logo}
+                        <a href={displayedProject.github}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <div className={classes.github_link}>
+                                <img
                                     className={classes.logo}
+                                    src={'/github.png'}
+                                    alt={displayedProject.title}
                                 />
-                            })}
-                        </div>
+                            </div>
+                        </a>
                     </div>
                 </Box>
             </Container>

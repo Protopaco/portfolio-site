@@ -49,9 +49,6 @@ const useStyles = makeStyles((theme) => ({
         textDecoration: 'none'
     },
 
-    link: {
-        backgroundColor: 'red',
-    }
 }))
 
 export const LandingPage = () => {
@@ -64,7 +61,7 @@ export const LandingPage = () => {
                 <Container className={classes.container}>
                     <Box className={classes.box}>
                         <Typography className={classes.linkbox}>
-
+                            About me
                         </Typography>
 
                     </Box>

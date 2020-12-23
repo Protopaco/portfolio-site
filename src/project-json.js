@@ -42,7 +42,6 @@ const projectJson = [
         url: "https://alchezoomy2.netlify.app/",
         logos: [
             '/javascript.png',
-            '/css.png',
             '/nodejs.png',
             '/postgresql.png',
             '/react.png',
@@ -51,14 +50,11 @@ const projectJson = [
             '/aws.png'
         ],
         description: [
-            `Having learned a termendous amount by our first run at the AlcheZoomy project, I am working on rebuilding it from scratch.`,
+            `Having discovered some design flaws, and seeing its tremendous potential I am rebuilding AlcheZoomy from scratch.`,
             `Using OAuth 2.0, mobX, Material-Ui, functional React, I am building a faster, cleaner, and more stable version of the app.`,
-            ` When it is finished, teachers will be able to publish individual meetings, adding them to our database of lectures.  Students will then be invited to view, save, and take notes on the lectures.`,
-            `At completion I hope that it will be used by future Alchemy students.`
+            ` When it is finished, teachers will be able to publish individual meetings, adding them to our database of lectures.  Students will then be invited to view, save, and share them.`
         ]
     },
 ]
-
-
 
 export default projectJson;

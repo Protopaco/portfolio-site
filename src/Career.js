@@ -92,7 +92,7 @@ export const Career = () => {
                     {careerJson.map(job => {
                         return <Box className={classes.box} component={Button} onClick={() => handleClick(job)} key={careerJson.indexOf(job)}>
                             <Typography className={classes.linkbox}>
-                                {`${job.title} - ${job.time} - ${job.business}`}
+                                {`${job.title} - ${job.business} - ${job.time}`}
                             </Typography>
                         </Box>
                     })}
@@ -102,7 +102,7 @@ export const Career = () => {
                         <CardHeader
                             title={`${popUpCard.title} - ${popUpCard.business}`}
                             subheader={popUpCard.time}
-                            style={{ backgroundColor: popUpCard.color, color: '#FFFFFF' }}
+                            style={{ backgroundColor: popUpCard.color, color: '#FFFFFF', }}
                             subheaderTypographyProps={{ color: '#FFFFFF' }}
                         />
                         <CardMedia
