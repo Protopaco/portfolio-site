@@ -84,7 +84,10 @@ export const LandingPage = () => {
                             PROJECTS
                         </Typography>
                     </Box>
-                    <Box className={classes.box}>
+                    <Box
+                        className={classes.box}
+                        component={Link}
+                        to='/contact'>
                         <Typography className={classes.linkbox}>
                             CONTACT
                         </Typography>

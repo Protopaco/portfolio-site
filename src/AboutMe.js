@@ -6,7 +6,7 @@ import aboutMeData from './aboutme-data.js';
 
 
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     root: {
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
