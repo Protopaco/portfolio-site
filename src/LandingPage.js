@@ -15,12 +15,12 @@ const useStyles = makeStyles((theme) => ({
     },
 
     box: {
-        border: '10px solid #1f3a4e',
+        border: '7px solid #fbf9ec',
         width: '300px',
         height: '200px',
-        backgroundColor: 'rgba(255, 255, 255, 0.5)',
+        backgroundColor: 'rgba(27, 50, 67, 0.4)',
         marginTop: '200px',
-        color: '#1f3a4e',
+        color: '#fbf9ec',
         fontSize: "3em",
         display: 'flex',
         justifyContent: 'center',
@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     textbox: {
         // ...theme.typography.button,
         padding: theme.spacing(1),
-        fontSize: '.4em',
+        fontSize: '.5em',
     },
 
     linkbox: {
@@ -63,18 +63,24 @@ export const LandingPage = () => {
             <div>
                 <Container className={classes.container}>
                     <Box className={classes.box}>
-                        <Typography className={classes.textbox}>
-                            I am a software developer with a history of problem solving, leadership, and project development.
-                            </Typography>
+                        <Typography className={classes.linkbox}>
+
+                        </Typography>
+
                     </Box>
                     <Box className={classes.box} component={Link} to='/career'>
                         <Typography className={classes.linkbox}>
                             Career
                             </Typography>
                     </Box>
-                    <Box className={classes.box}>
+                    <Box className={classes.box} component={Link} to='/projects'>
                         <Typography className={classes.linkbox}>
                             PROJECTS
+                        </Typography>
+                    </Box>
+                    <Box className={classes.box}>
+                        <Typography className={classes.linkbox}>
+                            CONTACT
                         </Typography>
                     </Box>
                 </Container>
