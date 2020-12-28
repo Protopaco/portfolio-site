@@ -52,7 +52,7 @@ export const Contact = () => {
     return (
         <div className={classes.root}>
             <Box className={classes.box}>
-                <Typography variant="h4">
+                <Typography variant="h5">
                     PAUL STEVENS
                 </Typography>
                 <div className={classes.line}>
@@ -83,7 +83,7 @@ export const Contact = () => {
                         rel="noreferrer">
                         <LinkedInIcon fontSize="small" />
                         <Typography variant="subtitle1">
-                            @paul-stevens-dev
+                            paul-stevens-dev
                     </Typography>
                     </a>
                 </div>
@@ -95,7 +95,7 @@ export const Contact = () => {
                         rel="noreferrer">
                         <GitHubIcon fontSize="small" />
                         <Typography variant="subtitle1">
-                            @Protopaco
+                            Protopaco
                     </Typography>
                     </a>
                 </div>
