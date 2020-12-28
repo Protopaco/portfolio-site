@@ -11,17 +11,18 @@ const useStyles = makeStyles(() => ({
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center top',
         width: '100%',
-        height: '100vh',
-        minWidth: '800px',
+        height: '100%',
+        minWidth: '100vw',
+        minHeight: '100vh',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
     },
     box: {
-        border: '10px solid #1f3a4e',
-        width: '1200px',
-        height: '750px',
+        border: '7px solid rgba(251, 249, 236, .7)',
+        width: '75%',
         backgroundColor: 'rgba(255, 255, 255, 0.8)',
         color: '#1f3a4e',
         fontSize: "3em",
@@ -29,8 +30,12 @@ const useStyles = makeStyles(() => ({
         flexDirection: 'column',
         justifyContent: 'space-between',
         margin: '10px',
-        padding: '20px'
+        padding: '20px',
+        marginTop: '80px',
     },
+    type: {
+        padding: '10px'
+    }
 
 }))
 
@@ -42,7 +47,10 @@ export const AboutMe = () => {
         <div className={classes.root}>
             <Box className={classes.box}>
                 {aboutMeData.map((data, index) => {
-                    return <Typography variant="body1" key={index}>
+                    return <Typography
+                        className={classes.type}
+                        variant="body1"
+                        key={index}>
                         {data}
                     </Typography>
                 })}

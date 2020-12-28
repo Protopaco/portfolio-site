@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Box, Typography } from '@material-ui/core';
+import { Grid, Box, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import backgroundImage from './images/background.jpg';
 import { Link } from "react-router-dom";
@@ -9,43 +9,34 @@ const useStyles = makeStyles((theme) => ({
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center top',
         width: '100%',
-        height: '100vh',
-        minWidth: '800px',
+        height: '100%',
+        minHeight: '100vh',
+        minWidth: '100vw',
     },
 
     box: {
-        border: '7px solid #fbf9ec',
-        width: '300px',
-        height: '200px',
+        border: '7px solid rgba(251, 249, 236, .7)',
+        width: '70%',
+        maxWidth: '300px',
+        height: '25%',
         backgroundColor: 'rgba(27, 50, 67, 0.4)',
-        marginTop: '200px',
         color: '#fbf9ec',
         fontSize: "3em",
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         textDecoration: 'none',
+        margin: "7% 12%",
     },
-
-    container: {
-        display: 'grid',
-        gridTemplateColumns: '50% 50%',
-        justifyItems: 'center',
-        alignContent: 'center'
-
+    grid: {
+        paddingTop: '10vh',
     },
-
-    textbox: {
-        // ...theme.typography.button,
-        padding: theme.spacing(1),
-        fontSize: '.5em',
-    },
-
     linkbox: {
         ...theme.typography.button,
         padding: theme.spacing(2),
-        fontSize: '.7em',
+        fontSize: '.5em',
         textDecoration: 'none'
     },
 
@@ -58,7 +49,11 @@ export const LandingPage = () => {
     return (
         <div className={classes.root}>
             <div>
-                <Container className={classes.container}>
+                <Grid
+                    className={classes.grid}
+                    container direction="row"
+                    justify="space-evenly"
+                    alignItems="center">
                     <Box
                         className={classes.box}
                         component={Link}
@@ -92,7 +87,7 @@ export const LandingPage = () => {
                             CONTACT
                         </Typography>
                     </Box>
-                </Container>
+                </Grid>
             </div>
         </div >
     );
