@@ -41,7 +41,7 @@ const projectJson = [
         github: "https://github.com/AlcheZoomy-2-0",
         url: "https://alchezoomy2.netlify.app/",
         logos: [
-            '/javascript.png',
+            // '/javascript.png',
             '/nodejs.png',
             '/postgresql.png',
             '/react.png',

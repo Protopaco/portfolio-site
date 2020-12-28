@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import backgroundImage from './images/background.jpg';
-import { Container, Box, Button, Typography } from '@material-ui/core';
+import { Grid, Box, Button, Typography } from '@material-ui/core';
 // import LanguageIcon from '@material-ui/icons/Language';
 import projectJson from './project-json.js';
 
@@ -11,22 +11,24 @@ const useStyles = makeStyles((theme) => ({
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center top',
         width: '100%',
-        height: '100vh',
-        minWidth: '800px',
+        height: '100%',
+        minWidth: '100vw',
+        minHeight: '100vh',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
     },
     box: {
-        border: '10px solid #1f3a4e',
-        width: '1200px',
-        height: '650px',
+        border: '7px solid rgba(251, 249, 236, .7)',
+        width: '90%',
+        // height: '650px',
         backgroundColor: 'rgba(255, 255, 255, 0.6)',
         color: '#1f3a4e',
         fontSize: "3em",
-        display: 'flex',
-        justifyContent: 'space-between',
+        // display: 'flex',
+        // justifyContent: 'space-between',
         margin: '10px',
     },
     container: {
@@ -37,7 +39,8 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: '100px',
     },
     button_row: {
-        width: "1000px",
+        width: "90vw",
+        maxWidth: "1000px",
         display: "flex",
         justifyContent: 'space-between',
         flexDirection: 'row',
@@ -45,6 +48,7 @@ const useStyles = makeStyles((theme) => ({
     button: {
         backgroundColor: '#1f3a4e',
         color: '#fbf9ec',
+        maxWidth: '30%',
     },
     logo_row: {
         backgroundColor: 'rgba(27, 50, 67, 0.4)',
@@ -56,22 +60,25 @@ const useStyles = makeStyles((theme) => ({
         padding: '5px'
     },
     description: {
-        width: '400px',
+        width: '90%',
+        maxWidth: '400px',
+        padding: ''
     },
-    sidebar: {
-        marginRight: '20px',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-evenly',
-        alignItems: 'center',
-    },
+    // sidebar: {
+    //     marginRight: '20px',
+    //     display: 'flex',
+    //     flexDirection: 'column',
+    //     justifyContent: 'space-evenly',
+    //     alignItems: 'center',
+    // },
     text_box: {
         backgroundColor: 'rgba(255, 255, 255, 0.6)',
         padding: '0px 10px 0px 10px',
         marginTop: '30px',
     },
     image: {
-        width: '700px',
+        width: '90%',
+        maxWidth: '700px',
         margin: '25px',
     },
     body: {
@@ -84,18 +91,22 @@ const useStyles = makeStyles((theme) => ({
     github_link: {
         backgroundColor: 'rgba(255, 255, 255, 0.6)',
         padding: '10px',
+        margin: '10px',
         borderRadius: '50px',
         width: '50px',
         height: '50px',
     },
 
-    github_label: {
-        ...theme.typography.button,
-        padding: theme.spacing(2),
-        fontSize: '.5em',
-        textDecoration: 'none',
-    }
+    // github_label: {
+    //     ...theme.typography.button,
+    //     padding: theme.spacing(2),
+    //     fontSize: '.5em',
+    //     textDecoration: 'none',
+    // },
 
+    grid: {
+        paddingTop: '10vh',
+    },
 }))
 
 export const Projects = () => {
@@ -103,13 +114,17 @@ export const Projects = () => {
     const [displayedProject, setDisplayedProject] = useState(projectJson[0]);
 
     const handleClick = (project) => {
-        console.log(project.title)
         setDisplayedProject(project);
     }
 
     return (
         <div className={classes.root}>
-            <Container className={classes.container}>
+            <Grid
+                className={classes.grid}
+                container direction="column"
+                justify="space-evenly"
+                alignItems="center">
+
                 <div className={classes.button_row}>
                     {projectJson.map(project => {
                         return <Button
@@ -126,7 +141,10 @@ export const Projects = () => {
                     })}
                 </div>
 
-                <Box className={classes.box}>
+                <Grid className={classes.box}
+                    container direction="column"
+                    justify="space-evenly"
+                    alignItems="center">
                     <div className={classes.body}>
                         <a href={displayedProject.url}
                             target="_blank"
@@ -148,34 +166,32 @@ export const Projects = () => {
                             })}
                         </div>
                     </div>
-                    <div className={classes.sidebar}>
-                        <div className={classes.text_box}>
-                            {displayedProject.description.map(text => {
-                                return <p>
-                                    <Typography
-                                        className={classes.description}
-                                        variant="body1">
-                                        {text}
-                                    </Typography>
+                    <div className={classes.text_box}>
+                        {displayedProject.description.map(text => {
+                            return <p>
+                                <Typography
+                                    className={classes.description}
+                                    variant="body1">
+                                    {text}
+                                </Typography>
 
-                                </p>
-                            })}
-                        </div>
-                        <a href={displayedProject.github}
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <div className={classes.github_link}>
-                                <img
-                                    className={classes.logo}
-                                    src={'/github.png'}
-                                    alt={displayedProject.title}
-                                />
-                            </div>
-                        </a>
+                            </p>
+                        })}
                     </div>
-                </Box>
-            </Container>
+                    <a href={displayedProject.github}
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <div className={classes.github_link}>
+                            <img
+                                className={classes.logo}
+                                src={'/github.png'}
+                                alt={displayedProject.title}
+                            />
+                        </div>
+                    </a>
+                </Grid>
+            </Grid>
 
         </div >
 
