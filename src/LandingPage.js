@@ -67,7 +67,7 @@ export const LandingPage = () => {
             <div className={classes.frame}>
                 <Slide in={click} direction="down">
                     <img
-                        src="/ProfilePic1Cropped.jpeg"
+                        src="/ProfilePic1Cropped.jpg"
                         alt="Paul Stevens"
                         className={classes.pic}
                     />
