@@ -21,20 +21,28 @@ const useStyles = makeStyles(() => ({
         alignItems: 'center',
     },
     box: {
-        // border: '7px solid rgba(251, 249, 236, .7)',
-        width: '75%',
+        width: '90%',
+        maxWidth: '900px',
         backgroundColor: 'rgba(255, 255, 255, 0.8)',
         color: '#1f3a4e',
         fontSize: "3em",
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
+        alignItems: 'center',
         margin: '10px',
         padding: '20px',
         marginTop: '80px',
     },
+
     type: {
         padding: '10px'
+    },
+
+    c64: {
+        width: '75%',
+        maxWidth: '400px',
+        marginBottom: '10px'
     }
 
 }))
@@ -46,6 +54,10 @@ export const AboutMe = () => {
     return (
         <div className={classes.root}>
             <Box className={classes.box}>
+                <img
+                    className={classes.c64}
+                    src="/commodore.gif"
+                    alt="commodore 64 screenshot" />
                 {aboutMeData.map((data, index) => {
                     return <Typography
                         className={classes.type}
