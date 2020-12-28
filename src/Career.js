@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Box, Typography, Button, Backdrop, Card, CardContent, CardHeader, CardMedia, List, ListItem, Divider, ListItemText } from '@material-ui/core';
+import { Container, Box, Typography, Backdrop, Card, CardContent, CardHeader, CardMedia, List, ListItem, Divider, ListItemText } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import backgroundImage from './images/background.jpg';
 import careerJson from './career-json.js';
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
     },
     box: {
-        border: '10px solid #1f3a4e',
+        border: '7px solid rgba(251, 249, 236, .7)',
         width: '80vw',
         minWidth: '50vw',
         maxWidth: '500px',
@@ -29,11 +29,12 @@ const useStyles = makeStyles((theme) => ({
         fontSize: "3em",
         display: 'flex',
         flexDirection: 'column',
-        // flexWrap: 'wrap',
         justifyContent: 'center',
         alignItems: 'center',
         margin: '5%',
+        cursor: 'pointer'
     },
+
 
     container: {
         display: 'flex',

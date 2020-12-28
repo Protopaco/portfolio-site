@@ -61,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
     },
     description: {
         width: '90%',
-        maxWidth: '400px',
+        maxWidth: '900px',
         padding: ''
     },
     // sidebar: {
@@ -80,6 +80,7 @@ const useStyles = makeStyles((theme) => ({
         width: '90%',
         maxWidth: '700px',
         margin: '25px',
+        alignSelf: 'center',
     },
     body: {
         display: 'flex',
@@ -96,14 +97,6 @@ const useStyles = makeStyles((theme) => ({
         width: '50px',
         height: '50px',
     },
-
-    // github_label: {
-    //     ...theme.typography.button,
-    //     padding: theme.spacing(2),
-    //     fontSize: '.5em',
-    //     textDecoration: 'none',
-    // },
-
     grid: {
         paddingTop: '10vh',
     },
@@ -149,7 +142,7 @@ export const Projects = () => {
                         <a href={displayedProject.url}
                             target="_blank"
                             rel="noreferrer"
-                        >
+                            className={classes.body}>
                             <img
                                 className={classes.image}
                                 src={displayedProject.image}

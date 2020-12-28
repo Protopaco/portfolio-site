@@ -12,17 +12,21 @@ const useStyles = makeStyles(() => ({
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center top',
         width: '100%',
-        height: '100vh',
-        minWidth: '800px',
+        height: '100%',
+        minWidth: '100vw',
+        minHeight: '100vh',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
     },
     box: {
-        border: '10px solid #1f3a4e',
-        width: '600px',
-        height: '400px',
+        border: '7px solid rgba(251, 249, 236, .7)',
+        width: '65%',
+        maxWidth: '500px',
+        height: '35vh',
+        maxHeight: '500px',
         backgroundColor: 'rgba(255, 255, 255, 0.8)',
         color: '#1f3a4e',
         fontSize: "3em",
@@ -48,25 +52,25 @@ export const Contact = () => {
     return (
         <div className={classes.root}>
             <Box className={classes.box}>
-                <Typography variant="h3">
+                <Typography variant="h4">
                     PAUL STEVENS
                 </Typography>
                 <div className={classes.line}>
-                    <HomeIcon fontSize="large" />
-                    <Typography variant="h5">
-                        1122 SE 36th Ave, Portland, OR, 97214
+                    <HomeIcon fontSize="small" />
+                    <Typography variant="subtitle1">
+                        Portland, OR
                     </Typography>
                 </div>
                 <div className={classes.line}>
-                    <PhoneIcon fontSize="large" />
-                    <Typography variant="h5">
+                    <PhoneIcon fontSize="small" />
+                    <Typography variant="subtitle1">
                         (360) 317-6607
                     </Typography>
                 </div>
                 <div>
                     <a href={"mailto:paul.stevens.developer@gmail.com"} className={classes.line}>
-                        <EmailIcon fontSize="large" />
-                        <Typography variant="h5">
+                        <EmailIcon fontSize="small" />
+                        <Typography variant="subtitle1">
                             paul.stevens.developer@gmail.com
                     </Typography>
                     </a>
@@ -77,8 +81,8 @@ export const Contact = () => {
                         className={classes.line}
                         target="_blank"
                         rel="noreferrer">
-                        <LinkedInIcon fontSize="large" />
-                        <Typography variant="h5">
+                        <LinkedInIcon fontSize="small" />
+                        <Typography variant="subtitle1">
                             @paul-stevens-dev
                     </Typography>
                     </a>
@@ -89,8 +93,8 @@ export const Contact = () => {
                         className={classes.line}
                         target="_blank"
                         rel="noreferrer">
-                        <GitHubIcon fontSize="large" />
-                        <Typography variant="h5">
+                        <GitHubIcon fontSize="small" />
+                        <Typography variant="subtitle1">
                             @Protopaco
                     </Typography>
                     </a>
