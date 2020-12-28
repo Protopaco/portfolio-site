@@ -12,7 +12,6 @@ const useStyles = makeStyles((theme) => ({
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
         color: '#080f15',
-
     },
     type: {
         ...theme.typography.button,
@@ -43,7 +42,9 @@ export const Header = () => {
     return (
         <AppBar positiong="static" className={classes.root}>
             <Toolbar>
-                <IconButton edge="start" className={classes.menuButton} aria-label="menu" onClick={handleClick}>
+                <IconButton edge="start"
+                    className={classes.menuButton} aria-label="menu"
+                    onClick={handleClick}>
                     <MenuIcon />
                 </IconButton>
                 <Menu
@@ -63,7 +64,12 @@ export const Header = () => {
                 <Typography className={classes.type}>
                     Paul Stevens - Developer
                 </Typography>
-                <IconButton edge="end" className={classes.homeButton} component={Link} to={'/'} aria-label="menu">
+                <IconButton
+                    edge="end"
+                    className={classes.homeButton}
+                    component={Link}
+                    to={'/'}
+                    aria-label="menu">
                     <HomeIcon />
                 </IconButton>
             </Toolbar>
