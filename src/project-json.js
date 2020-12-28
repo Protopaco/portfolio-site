@@ -17,7 +17,7 @@ const projectJson = [
             `Although there were 5 scenes and over 50 possible prompts, the game could be scaled to twice that size without changing any game engine code.`,]
     },
     {
-        title: "AlcheZoomy",
+        title: "Alche Zoomy",
         image: '/alchezoomy.png',
         github: "https://github.com/Alchezoomy",
         url: "https://alchezoomy.netlify.app/",
@@ -36,7 +36,7 @@ const projectJson = [
             ` We also created a student portal that allows users to scroll through available lectures, and view them accommpanied by their chat & transcript data.  The students can also store individual timecodes for future reference.`,]
     },
     {
-        title: "AlcheZoomy2",
+        title: "Alche Zoomy 2",
         image: '/alchezoomy2.png',
         github: "https://github.com/AlcheZoomy-2-0",
         url: "https://alchezoomy2.netlify.app/",

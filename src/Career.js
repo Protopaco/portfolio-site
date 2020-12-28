@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
     },
     box: {
-        border: '7px solid rgba(251, 249, 236, .7)',
+        // border: '7px solid rgba(251, 249, 236, .7)',
         width: '80vw',
         minWidth: '50vw',
         maxWidth: '500px',
@@ -89,9 +89,8 @@ export const Career = () => {
     const [popUpCard, setPopUpCard] = useState(careerJson[0])
 
     const handleClick = (job) => {
-        setOpen(true);
         setPopUpCard(job);
-        console.log(popUpCard.logo)
+        setOpen(true);
     }
 
     const handleClose = () => {
