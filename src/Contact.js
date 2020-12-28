@@ -22,7 +22,7 @@ const useStyles = makeStyles(() => ({
         alignItems: 'center',
     },
     box: {
-        border: '7px solid rgba(251, 249, 236, .7)',
+        // border: '7px solid rgba(251, 249, 236, .7)',
         width: '65%',
         maxWidth: '500px',
         height: '35vh',

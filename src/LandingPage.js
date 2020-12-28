@@ -17,12 +17,12 @@ const useStyles = makeStyles((theme) => ({
     },
 
     box: {
-        border: '7px solid rgba(251, 249, 236, .7)',
+        // border: '7px solid rgba(251, 249, 236, .7)',
         width: '70%',
         maxWidth: '300px',
         height: '25%',
-        backgroundColor: 'rgba(27, 50, 67, 0.4)',
-        color: '#fbf9ec',
+        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+        color: '#1f3a4e',
         fontSize: "3em",
         display: 'flex',
         justifyContent: 'center',

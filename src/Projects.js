@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
     },
     box: {
-        border: '7px solid rgba(251, 249, 236, .7)',
+        // border: '7px solid rgba(251, 249, 236, .7)',
         width: '90%',
         // height: '650px',
         backgroundColor: 'rgba(255, 255, 255, 0.6)',
@@ -122,6 +122,7 @@ export const Projects = () => {
                     {projectJson.map(project => {
                         return <Button
                             variant="contained"
+                            size="small"
                             onClick={() => handleClick(project)}
                             className={classes.button}
                             disabled={displayedProject.title === project.title ?
