@@ -1,4 +1,4 @@
-import { makeStyles, Box, Typography } from '@material-ui/core';
+import { makeStyles, Box, Typography, Chip } from '@material-ui/core';
 import React from 'react';
 import backgroundImage from './images/background.jpg';
 import HomeIcon from '@material-ui/icons/Home';
@@ -6,6 +6,7 @@ import PhoneIcon from '@material-ui/icons/Phone';
 import EmailIcon from '@material-ui/icons/Email';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
 
 const useStyles = makeStyles(() => ({
     root: {
@@ -55,6 +56,21 @@ export const Contact = () => {
                 <Typography variant="h5">
                     PAUL STEVENS
                 </Typography>
+                <a
+                    href={"/PaulStevensResume12-23-20.pdf"}
+                    className={classes.line}
+                    target="_blank"
+                    rel="noreferrer">
+
+                    <Chip
+                        size="large"
+                        label="RESUME"
+                        icon={PictureAsPdfIcon}
+                        color="primary"
+                        clickable
+                    />
+                </a>
+
                 <div className={classes.line}>
                     <HomeIcon fontSize="small" />
                     <Typography variant="subtitle1">
