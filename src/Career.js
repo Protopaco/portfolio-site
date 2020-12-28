@@ -9,10 +9,10 @@ const useStyles = makeStyles((theme) => ({
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
+        backgroundPosition: 'center top',
         width: '100%',
         height: '100%',
-        minWidth: '80vh',
+        minWidth: '80w',
         minHeight: '100vh',
         display: 'flex',
         justifyContent: 'center',
@@ -20,16 +20,19 @@ const useStyles = makeStyles((theme) => ({
     },
     box: {
         border: '10px solid #1f3a4e',
-        width: '80%',
+        width: '80vw',
+        minWidth: '50vw',
+        maxWidth: '500px',
         height: '100px',
         backgroundColor: 'rgba(255, 255, 255, 0.8)',
         color: '#1f3a4e',
         fontSize: "3em",
         display: 'flex',
-        flexWrap: 'wrap',
+        flexDirection: 'column',
+        // flexWrap: 'wrap',
         justifyContent: 'center',
         alignItems: 'center',
-        margin: '10px',
+        margin: '5%',
     },
 
     container: {
@@ -37,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         justifyItems: 'center',
         alignItems: 'center',
-        paddingTop: '100px',
+        paddingTop: '15%',
     },
 
     textbox: {
@@ -48,26 +51,33 @@ const useStyles = makeStyles((theme) => ({
     },
 
     linkbox: {
-        ...theme.typography.button,
-        padding: theme.spacing(2),
-        fontSize: '.37em',
+        textTransform: 'uppercase',
+        padding: '2px',
+        fontSize: '.33em',
+        // fontSize: '3vw',
     },
     backdrop: {
         zIndex: theme.zIndex.drawer + 1,
         color: '#fff',
     },
     media: {
-        width: '500px',
-        height: '200px',
+        width: '100%',
+        maxWidth: '500px',
+        height: '30vh',
+        maxHeight: '200px',
         display: 'flex',
         justifyContent: 'center',
+        alignItems: 'center'
     },
     logo: {
         width: 'auto',
-        height: '200px',
+        maxWidth: '90%',
+        height: '25vh',
+        maxHeight: '200px',
     },
     card: {
-        width: '500px'
+        width: '90vw',
+        maxWidth: '500px'
     }
 }))
 
@@ -91,10 +101,23 @@ export const Career = () => {
         <div className={classes.root}>
             <div>
                 <Container className={classes.container}>
-                    {careerJson.map(job => {
-                        return <Box className={classes.box} component={Button} onClick={() => handleClick(job)} key={careerJson.indexOf(job)}>
-                            <Typography className={classes.linkbox}>
-                                {`${job.title} - ${job.business} - ${job.time}`}
+                    {careerJson.map((job, index) => {
+                        return <Box
+                            className={classes.box}
+                            // component={Button}
+                            onClick={() => handleClick(job)}
+                            key={index}>
+                            <Typography
+                                className={classes.linkbox}>
+                                {job.title}
+                            </Typography>
+                            <Typography
+                                className={classes.linkbox}>
+                                {job.business}
+                            </Typography>
+                            <Typography
+                                className={classes.linkbox}>
+                                {job.time}
                             </Typography>
                         </Box>
                     })}
