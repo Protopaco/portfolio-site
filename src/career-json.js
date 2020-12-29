@@ -7,7 +7,7 @@ const careerJson = [
         color: '#000000',
         details: [
             'Sole Owner & General Manager',
-            '$1 mil+ yearly revenue, 20 employees',
+            '$1 mil yearly revenue, 20 employees',
             'Returned failing Portland instituion to profitablity',
             '10% yearly sales growth'
         ]
