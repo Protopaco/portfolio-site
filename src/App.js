@@ -1,4 +1,5 @@
 import React from 'react'
+
 import {
   BrowserRouter as Router,
   Route,
@@ -13,6 +14,7 @@ import Contact from './Contact.js';
 import './App.css';
 
 function App() {
+  const reload = () => window.location.reload();
   return (
     <Router>
       <Header />
@@ -27,6 +29,8 @@ function App() {
           component={AboutMe} />
         <Route exact path="/contact"
           component={Contact} />
+        <Route path="/PaulStevensResume12-23-20.pdf"
+          onEnter={reload} />
       </Switch>
     </Router>
   );

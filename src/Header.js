@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     },
     type: {
         ...theme.typography.button,
-        fontSize: '1em',
+        fontSize: '.8em',
         flexGrow: 1,
     },
     homeButton: {

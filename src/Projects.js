@@ -21,14 +21,10 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
     },
     box: {
-        // border: '7px solid rgba(251, 249, 236, .7)',
         width: '90%',
-        // height: '650px',
         backgroundColor: 'rgba(255, 255, 255, 0.6)',
         color: '#1f3a4e',
         fontSize: "3em",
-        // display: 'flex',
-        // justifyContent: 'space-between',
         margin: '10px',
     },
     container: {
@@ -36,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         justifyItems: 'center',
         alignItems: 'center',
-        paddingTop: '100px',
+        paddingTop: '10vh',
     },
     button_row: {
         width: "90vw",
@@ -64,13 +60,7 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: '900px',
         padding: ''
     },
-    // sidebar: {
-    //     marginRight: '20px',
-    //     display: 'flex',
-    //     flexDirection: 'column',
-    //     justifyContent: 'space-evenly',
-    //     alignItems: 'center',
-    // },
+
     text_box: {
         backgroundColor: 'rgba(255, 255, 255, 0.6)',
         padding: '0px 10px 0px 10px',
@@ -98,7 +88,7 @@ const useStyles = makeStyles((theme) => ({
         height: '50px',
     },
     grid: {
-        paddingTop: '10vh',
+        paddingTop: '12vh',
     },
 }))
 
