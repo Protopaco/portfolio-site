@@ -7,7 +7,6 @@ import EmailIcon from '@material-ui/icons/Email';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
-// import resume from './images/PaulStevensResume12-23-20.pdf';
 
 const useStyles = makeStyles(() => ({
     root: {
@@ -51,23 +50,22 @@ const useStyles = makeStyles(() => ({
 export const Contact = () => {
     const classes = useStyles();
 
-    const onResumeClick = () => {
-        window.open('/PaulStevensResume12-23-20.pdf')
-    }
     return (
         <div className={classes.root}>
             <Box className={classes.box}>
                 <Typography variant="h5">
                     PAUL STEVENS
                 </Typography>
-                <Chip
-                    size="medium"
-                    label="RESUME"
-                    icon={<PictureAsPdfIcon />}
-                    color="primary"
-                    clickable
-                    onClick={onResumeClick}
-                />
+                <a href="https://alchezoomy.s3-us-west-2.amazonaws.com/PaulStevensResume12-23-20.pdf"
+                    target="_blank"
+                    rel="noreferrer">
+                    <Chip
+                        size="medium"
+                        label="RESUME"
+                        icon={<PictureAsPdfIcon />}
+                        color="primary"
+                    />
+                </a>
 
 
                 <div className={classes.line}>
