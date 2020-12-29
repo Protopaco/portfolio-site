@@ -52,7 +52,7 @@ export const Contact = () => {
     const classes = useStyles();
 
     const onResumeClick = () => {
-        window.open('resume')
+        window.open(resume)
     }
     return (
         <div className={classes.root}>
