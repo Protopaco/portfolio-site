@@ -57,11 +57,14 @@ const useStyles = makeStyles((theme) => ({
 
 export const LandingPage = () => {
     const classes = useStyles();
-    const [click, setClicked] = useState(false);
+    const [click, setClick] = useState(localStorage.getItem('click'));
+
 
     const handleClick = () => {
-        setClicked(true);
+        localStorage.setItem('click', true)
+        setClick(true)
     }
+
     return (
         <div className={classes.root}>
             <div className={classes.frame}>
