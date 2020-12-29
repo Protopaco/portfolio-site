@@ -51,24 +51,24 @@ const useStyles = makeStyles(() => ({
 export const Contact = () => {
     const classes = useStyles();
 
+    const onResumeClick = () => {
+        window.open('resume')
+    }
     return (
         <div className={classes.root}>
             <Box className={classes.box}>
                 <Typography variant="h5">
                     PAUL STEVENS
                 </Typography>
-                <a
-                    href={resume}
-                    className={classes.line}
-                    target="_blank"
-                    rel="noreferrer">
-                    <Chip
-                        size="medium"
-                        label="RESUME"
-                        icon={<PictureAsPdfIcon />}
-                        color="primary"
-                    />
-                </a>
+                <Chip
+                    size="medium"
+                    label="RESUME"
+                    icon={<PictureAsPdfIcon />}
+                    color="primary"
+                    clickable
+                    onClick={onResumeClick}
+                />
+
 
                 <div className={classes.line}>
                     <HomeIcon fontSize="small" />
