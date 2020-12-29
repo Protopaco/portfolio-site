@@ -104,7 +104,6 @@ export const Career = () => {
                     {careerJson.map((job, index) => {
                         return <Box
                             className={classes.box}
-                            // component={Button}
                             onClick={() => handleClick(job)}
                             key={index}>
                             <Typography
@@ -137,13 +136,13 @@ export const Career = () => {
                         </CardMedia>
                         <CardContent>
                             <List>
-                                {popUpCard.details.map(detail => {
+                                {popUpCard.details.map((detail, index) => {
                                     return <div>
                                         <Divider />
                                         <ListItem>
                                             <ListItemText
                                                 primary={detail}
-                                                key={popUpCard.details.indexOf(detail)}
+                                                key={index}
                                             />
                                         </ListItem>
                                     </div>
