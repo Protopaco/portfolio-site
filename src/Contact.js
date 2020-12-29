@@ -57,7 +57,7 @@ export const Contact = () => {
                     PAUL STEVENS
                 </Typography>
                 <a
-                    href={"/PaulStevensResume12-23-20.pdf"}
+                    href={"PaulStevensResume12-23-20.pdf"}
                     className={classes.line}
                     target="_blank"
                     rel="noreferrer">
@@ -67,7 +67,6 @@ export const Contact = () => {
                         label="RESUME"
                         icon={<PictureAsPdfIcon />}
                         color="primary"
-                        clickable
                     />
                 </a>
 
