@@ -7,7 +7,7 @@ import EmailIcon from '@material-ui/icons/Email';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
-import resume from './images/PaulStevensResume12-23-20.pdf';
+// import resume from './images/PaulStevensResume12-23-20.pdf';
 
 const useStyles = makeStyles(() => ({
     root: {
@@ -52,7 +52,7 @@ export const Contact = () => {
     const classes = useStyles();
 
     const onResumeClick = () => {
-        window.open(resume)
+        window.open('/PaulStevensResume12-23-20.pdf')
     }
     return (
         <div className={classes.root}>
