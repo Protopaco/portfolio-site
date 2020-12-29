@@ -63,9 +63,9 @@ export const Contact = () => {
                     rel="noreferrer">
 
                     <Chip
-                        size="large"
+                        size="medium"
                         label="RESUME"
-                        icon={PictureAsPdfIcon}
+                        icon={<PictureAsPdfIcon />}
                         color="primary"
                         clickable
                     />

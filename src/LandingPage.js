@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Grid, Box, Typography } from '@material-ui/core';
+import { Grid, Box, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import backgroundImage from './images/background.jpg';
 import { Link } from "react-router-dom";
@@ -57,11 +57,14 @@ const useStyles = makeStyles((theme) => ({
 
 export const LandingPage = () => {
     const classes = useStyles();
-    const [click, setClicked] = useState(false);
+    const [click, setClick] = useState(localStorage.getItem('click'));
+    console.log(localStorage.getItem('click'))
 
     const handleClick = () => {
-        setClicked(true);
+        localStorage.setItem('click', true)
+        setClick(true)
     }
+
     return (
         <div className={classes.root}>
             <div className={classes.frame}>
@@ -75,7 +78,7 @@ export const LandingPage = () => {
                 {
                     !click ?
                         <Box className={classes.box}
-                            clickable
+                            // clickable
                             style={{ marginTop: '10%', cursor: 'pointer' }}
                             onClick={handleClick}>
                             <Typography className={classes.linkbox}>HELLO!</Typography>
