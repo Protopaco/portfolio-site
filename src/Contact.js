@@ -7,6 +7,7 @@ import EmailIcon from '@material-ui/icons/Email';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
+import resume from './images/PaulStevensResume12-23-20.pdf';
 
 const useStyles = makeStyles(() => ({
     root: {
@@ -57,11 +58,10 @@ export const Contact = () => {
                     PAUL STEVENS
                 </Typography>
                 <a
-                    href={"PaulStevensResume12-23-20.pdf"}
+                    href={resume}
                     className={classes.line}
                     target="_blank"
                     rel="noreferrer">
-
                     <Chip
                         size="medium"
                         label="RESUME"
