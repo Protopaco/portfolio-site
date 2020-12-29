@@ -29,8 +29,6 @@ function App() {
           component={AboutMe} />
         <Route exact path="/contact"
           component={Contact} />
-        <Route path="/PaulStevensResume12-23-20.pdf"
-          onEnter={reload} />
       </Switch>
     </Router>
   );
