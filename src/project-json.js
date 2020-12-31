@@ -20,7 +20,7 @@ const projectJson = [
         title: "Alche Zoomy",
         image: '/alchezoomy.png',
         github: "https://github.com/Alchezoomy",
-        url: "https://www.alchezoomy.com/",
+        url: "https://alchezoomy.netlify.app/",
         logos: [
             '/javascript.png',
             '/css.png',
@@ -39,7 +39,7 @@ const projectJson = [
         title: "Alche Zoomy 2",
         image: '/alchezoomy2.png',
         github: "https://github.com/AlcheZoomy-2-0",
-        url: "https://alchezoomy2.netlify.app/",
+        url: "https://www.alchezoomy.com/",
         logos: [
             // '/javascript.png',
             '/nodejs.png',
@@ -50,9 +50,13 @@ const projectJson = [
             '/aws.png'
         ],
         description: [
-            `Having discovered some design flaws, yet seeing its tremendous potential I am rebuilding AlcheZoomy from scratch.`,
-            `Using OAuth 2.0, mobX, Material-Ui, and functional React, I am building a faster, cleaner, and more stable version of the app.`,
-            ` When it is finished, teachers will be able to publish individual meetings, adding them to our database of lectures.  Students will then be invited to view, save, and share them.`
+            `A educational application that allows teachers to publish their Zoom lectures with video, transcripts & chat.`,
+
+            `Utilizes React frontend, Node.js API, PostgreSQL database, Nginx webserver, and S3 bucket storage.  All hosted in AWS cloud.`,
+
+            `Uses Zoom's OAuth API for secure login management`,
+
+            `Utilizes React, MobX, Node.js, PostgreSQL, Material.ui, & OAuth 2.0 on AWS servers`
         ]
     },
 ]
