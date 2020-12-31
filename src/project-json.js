@@ -20,7 +20,7 @@ const projectJson = [
         title: "Alche Zoomy",
         image: '/alchezoomy.png',
         github: "https://github.com/Alchezoomy",
-        url: "https://alchezoomy.netlify.app/",
+        url: "https://www.alchezoomy.com/",
         logos: [
             '/javascript.png',
             '/css.png',
