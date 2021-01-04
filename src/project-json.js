@@ -31,14 +31,14 @@ const projectJson = [
         description: [
             `AlcheZoomy is an educational assistant app, that uses Zoom's API to give student's the ability to search through and save recorded lectures.`,
 
-            `  My team used Zoom's built in chat, video, and transcription services to create a RESTful API using Node.js and PostgreSQL. 
+            `My team used Zoom's built in chat, video, and transcription services to create a RESTful API using Node.js and PostgreSQL. 
         `,
             ` We also created a student portal that allows users to scroll through available lectures, and view them accommpanied by their chat & transcript data.  The students can also store individual timecodes for future reference.`,]
     },
     {
         title: "Alche Zoomy 2",
         image: '/alchezoomy2.png',
-        github: "https://github.com/AlcheZoomy-2-0",
+        github: "https://github.com/Alchezoomy2",
         url: "https://www.alchezoomy.com/",
         logos: [
             // '/javascript.png',
