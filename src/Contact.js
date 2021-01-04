@@ -56,7 +56,7 @@ export const Contact = () => {
                 <Typography variant="h5">
                     PAUL STEVENS
                 </Typography>
-                <a href="https://alchezoomy.s3-us-west-2.amazonaws.com/PaulStevensResume12-23-20.pdf"
+                <a href="https://alchezoomy.s3-us-west-2.amazonaws.com/PaulStevensResume.pdf"
                     target="_blank"
                     rel="noreferrer">
                     <Chip
@@ -66,8 +66,6 @@ export const Contact = () => {
                         color="primary"
                     />
                 </a>
-
-
                 <div className={classes.line}>
                     <HomeIcon fontSize="small" />
                     <Typography variant="subtitle1">
