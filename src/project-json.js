@@ -17,26 +17,7 @@ const projectJson = [
             `Although there were 5 scenes and over 50 possible prompts, the game could be scaled to twice that size without changing any game engine code.`,]
     },
     {
-        title: "Alche Zoomy",
-        image: '/alchezoomy.png',
-        github: "https://github.com/Alchezoomy",
-        url: "https://alchezoomy.netlify.app/",
-        logos: [
-            '/javascript.png',
-            '/css.png',
-            '/nodejs.png',
-            'postgresql.png',
-            'react.png',
-        ],
-        description: [
-            `AlcheZoomy is an educational assistant app, that uses Zoom's API to give student's the ability to search through and save recorded lectures.`,
-
-            `My team used Zoom's built in chat, video, and transcription services to create a RESTful API using Node.js and PostgreSQL. 
-        `,
-            ` We also created a student portal that allows users to scroll through available lectures, and view them accommpanied by their chat & transcript data.  The students can also store individual timecodes for future reference.`,]
-    },
-    {
-        title: "Alche Zoomy 2",
+        title: "AlcheZoomy",
         image: '/alchezoomy2.png',
         github: "https://github.com/Alchezoomy2",
         url: "https://www.alchezoomy.com/",
@@ -59,6 +40,25 @@ const projectJson = [
             `Utilizes React, MobX, Node.js, PostgreSQL, Material.ui, & OAuth 2.0 on AWS servers`
         ]
     },
+    {
+        title: 'Petreon',
+        image: '/petreon.png',
+        github: 'https://github.com/Alchemy-Petreon',
+        url: "https://petreon.netlify.app/",
+        logos: [
+            '/nodejs.png',
+            '/postgresql.png',
+            '/react.png',
+            '/aws.png'
+        ],
+        description: [
+            'Full-stack social media platform, utilizing Google OAuth credentials.  Hosted on AWS RDS & S3, Heroku and Netlify servers.',
+
+            'Personally responsible for all authorization & database systems, as well as implementing independent development & production environments.',
+
+            'Built by a three person team in eight days.'
+        ]
+    }
 ]
 
 export default projectJson;
