@@ -93,7 +93,7 @@ export const LandingPage = () => {
                     justify="center"
                     align="center">
                     <Grid item xs={12} sm={6}>
-                        <Slide in={click} direction="left" style={{ transitionDelay: click ? '100ms' : '0ms' }}>
+                        <Slide in={click} direction="up" style={{ transitionDelay: click ? '100ms' : '0ms' }}>
                             <Box
                                 className={classes.box}
                                 component={Link}
@@ -131,7 +131,7 @@ export const LandingPage = () => {
                         </Slide>
                     </Grid>
                     <Grid item xs={12} sm={6}>
-                        <Slide in={click} direction="right" style={{ transitionDelay: click ? '400ms' : '0ms' }}>
+                        <Slide in={click} direction="down" style={{ transitionDelay: click ? '400ms' : '0ms' }}>
 
                             <Box
                                 className={classes.box}
