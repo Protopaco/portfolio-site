@@ -42,7 +42,7 @@ const projectJson = [
     },
     {
         title: 'Petreon',
-        image: '/petreon.png',
+        image: '/Petreon.png',
         github: 'https://github.com/Alchemy-Petreon',
         url: "https://petreon.netlify.app/",
         logos: [
